@@ -1,1 +1,35 @@
 
+CREATE SCHEMA `test_database` ;
+
+
+CREATE TABLE `test_database`.`problem` (
+  `ID` INT NOT NULL,
+  `name` VARCHAR(45) NOT NULL,
+  `description` VARCHAR(45) NOT NULL,
+  `parameter_number` INT NOT NULL,
+  `start_format` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`ID`));
+
+
+CREATE TABLE `test_database`.`step_info` (
+  `ID` INT NOT NULL,
+  `problem_ID` INT NOT NULL,
+  `name` VARCHAR(45) NOT NULL,
+  `feed_back` VARCHAR(45) NOT NULL,
+  `step_number` INT NOT NULL,
+  `type` INT NOT NULL,
+  `finish` INT NOT NULL,
+  PRIMARY KEY (`ID`));
+
+
+CREATE TABLE `test_database`.`second_level_parameter` (
+  `ID` INT NOT NULL,
+  `step_ID` INT NOT NULL,
+  `format` CHAR(45) NOT NULL,
+  PRIMARY KEY (`ID`));
+
+CREATE TABLE `test_database`.`step_format` (
+  `ID` INT NOT NULL,
+  `step_ID` INT NOT NULL,
+  `format` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`ID`));
