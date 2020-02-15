@@ -29,3 +29,14 @@ CREATE TABLE `test_database`.`second_level_parameter` (
   `format` CHAR(45) NOT NULL,
   PRIMARY KEY (`ID`));
 
+
+
+INSERT INTO `test_database`.`problem` (`ID`, `name`, `description`, `parameter_number`, `start_format`) VALUES ('1', '\"complex number addition\"', '\"complex number addition problem\"', '4', '\"(,$1,+,$2,i,),+,(,$3,+,$4,i,)\"');
+
+INSERT INTO `test_database`.`second_level_parameter` (`ID`, `problem_ID`, `format`) VALUES ('1', '1', '\"#1,$1,+,$3\"');
+INSERT INTO `test_database`.`second_level_parameter` (`ID`, `problem_ID`, `format`) VALUES ('2', '1', '\"#2,$2,+,#4\"');
+
+
+INSERT INTO `test_database`.`step_info` (`ID`, `problem_ID`, `name`, `feed_back`, `step_number`, `type`, `finish`, `format`) VALUES ('1', '1', 'complex_number', 'right2_1', '2', '1', '1', '\"(,$1,+,$3,),+,(,$2,i,+,$3,i,)\"');
+INSERT INTO `test_database`.`step_info` (`ID`, `problem_ID`, `name`, `feed_back`, `step_number`, `type`, `finish`, `format`) VALUES ('2', '1', 'complex_number', 'right2_2', '2', '1', '1', '\"(,$1,+,$3,),+,(,$2,+,$3,),i,\"');
+INSERT INTO `test_database`.`step_info` (`ID`, `problem_ID`, `name`, `feed_back`, `step_number`, `type`, `finish`, `format`) VALUES ('3', '1', 'complex_number', 'right3_1', '3', '1', '2', '\"#1,+,#2,i\"');
