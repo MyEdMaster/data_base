@@ -19,17 +19,13 @@ CREATE TABLE `test_database`.`step_info` (
   `step_number` INT NOT NULL,
   `type` INT NOT NULL,
   `finish` INT NOT NULL,
+  `format` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`ID`));
 
 
 CREATE TABLE `test_database`.`second_level_parameter` (
   `ID` INT NOT NULL,
-  `step_ID` INT NOT NULL,
+  `problem_ID` INT NOT NULL,
   `format` CHAR(45) NOT NULL,
   PRIMARY KEY (`ID`));
 
-CREATE TABLE `test_database`.`step_format` (
-  `ID` INT NOT NULL,
-  `step_ID` INT NOT NULL,
-  `format` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`ID`));
