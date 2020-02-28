@@ -31,7 +31,7 @@ CREATE TABLE `test_database`.`second_level_parameter` (
   
 ALTER TABLE test_database.problem CHANGE ID ID int AUTO_INCREMENT;
 ALTER TABLE test_database.second_level_parameter CHANGE ID ID int AUTO_INCREMENT;
-ALTER TABLE test_database.step_info CHANGE ID ID int AUTO_INCREMENT
+ALTER TABLE test_database.step_info CHANGE ID ID int AUTO_INCREMENT;
 
 
 INSERT INTO `test_database`.`problem` (`ID`, `name`, `description`, `parameter_number`, `start_format`) VALUES ('1', '\ complex number addition\ ', '\ complex number addition problem\ ', '4', '\ (,$1,+,$2,i,),+,(,$3,+,$4,i,)\ ');
